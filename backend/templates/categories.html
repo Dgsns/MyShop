@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Categories{% endblock title %}
+
+<main>
+{% block content %}
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+        <div class="card">
+            <div class="card_head">
+                <h1>Categories:</h1>
+            </div>
+            <div class="card_item">
+                {% for x in category %}
+                    <div class="card_body S">
+                        <h2>Describe:</h2>
+                        <ul>
+                            <li onclick="window.location = 'category/{{ x.id }}'">{{ x.name }}
+                                <a href="window.location = 'category/{{ x.id }}'">
+                                    {{ category.name }}
+                                </a>
+                            </li>
+                        </ul>
+                        <img width="200px" src="{% static 'img/salat.png' %}" alt="sal">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}
+</main>
+
+

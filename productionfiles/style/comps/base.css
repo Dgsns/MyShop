@@ -1,0 +1,37 @@
+body{
+    background-image: url("../../img/grocery2.jpg");
+    background-size: 25%;
+    padding: 0 8%;
+}
+
+
+.container{
+    background-color:  #faebd7;
+    padding: 3% 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+a:link, a:visited {
+    text-decoration: none;
+    transition: color 0.3s, background 0.3s;
+}
+
+
+a:link, a:visited {
+    color: white;
+}
+
+
+a:hover {
+    color: red;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}About{% endblock %}
+
+<main>
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+    {% block content %}
+    <style>
+        .about{
+            display: flex;
+            margin-top: 70px;
+            border-top: 2px solid rgb(3, 57, 96);
+            border-bottom: 2px solid rgb(3, 57, 96);
+        }
+
+        .about_item{
+            display: flex;
+            margin-left: 30px;
+            width: 100%;
+            padding: 50px 0;
+            align-items: center;
+            position: relative;
+        }
+
+        .about_item::before{
+            content: "";
+            width: 770px;
+            height: 170px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgb(242, 195, 8);
+            opacity: .4;
+        }
+
+        .about_item::after{
+            content: "";
+            position: absolute;
+            height: 155px;
+            background-color: rgb(158, 158, 252);
+            width: 38%;
+            bottom: 0;
+            left: 0;
+            opacity: .4;
+            transition: 0.6s;
+        }
+
+        .about_item:hover::after{
+            width: 100%;
+        }
+
+        .about_item h2, h3{
+            font-size: 20px;
+            color: rgb(55, 2, 2);
+            margin-bottom: 15px;
+            margin-right: 10px;
+            margin-left: 15px;
+        }
+
+        .about_item p{
+            font-size: 15px;
+            color: rgb(4, 12, 122);
+            margin-left: 10px;
+        }
+    </style>
+        <div class="about">
+            <div class="about_item">
+                <div>
+                    <img width="100px" height="100px" src="{% static 'img/logo.png' %}" alt="sal">
+                </div>
+                <div>
+                    <h2>Welcome to our Caffee@Store </h2>
+                    <h3>With our gentle and precision management<br>we provide you choose the best nice and fast!</h3>
+                </div>
+                <div>
+                    <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Quibusdam architecto repudiandae
+                        rerum facilis? Suscipit eligendi veniam ullam sapiente earum assumenda..."</p>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</main>
+
+
+
+

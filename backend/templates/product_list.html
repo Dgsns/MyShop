@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Products{% endblock title %}
+
+<main>
+
+{% block content %}
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+        <div class="card">
+            <div class="card_head">
+                <h1>All-Products:</h1>
+                <div class="menu_link">
+                    <a href="{% url 'categories' %}">See More</a>
+                </div>
+            </div>
+            {% if product_list %}
+                <div class="card_item">
+                    {% for product in product_list %}
+                        <div class="card_body S">
+                            <img width="200px" src="{% static 'img/salat.png' %}" alt="sal">
+                            <h2>Describe:</h2>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'product' product.pk %}">
+                                        {{ product.name }}
+                                    </a>({{ product.price|currency }})
+                                </li>
+                            </ul>
+                            <div class="menu_link card_link_pro">
+                                <a href="{% url 'add_basket' %}">Buy Now</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+{% endblock %}
+
+</main>
+
+
+

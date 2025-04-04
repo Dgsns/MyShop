@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Profile{% endblock title %}
+
+<body>
+
+{% block content %}
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+
+    <style>
+        .grid{
+            display: grid;
+            grid-auto-rows: 250px;
+            gap: 5px;
+            margin: 5%;
+            border: 1px solid grey;
+        }
+        .grid_item:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .grid_item:nth-child(2){
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .grid_item{
+            position: relative;
+            transition: .4s;
+        }
+        .grid_item>img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        .grid_text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+            color: rgb(3, 3, 85);
+        }
+        .gr_categ{
+            display: flex;
+            align-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-weight: bold;
+            text-decoration: solid rgb(42, 40, 40);
+            transition: .3s;
+        }
+        .grid_item:hover .gr_line{
+            width: 200px;
+            background-color: aqua;
+        }
+        .gr_line{
+            display: block;
+            text-align: center;
+            transform: translateX(-45%);
+            transform: translateY(-45%);
+        }
+        .grid_text span{
+            width: 50px;
+            height: 5px;
+            border-radius: 30%;
+            background-color: rgb(250, 47, 162);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+        .shop_link{
+            background-color: rgb(171, 99, 238);
+            border-radius: 25px;
+            transition: 0.3s;
+            padding: 1%;
+        }
+        h6{
+            font-size: 35px;
+            color:blue;
+        }
+    </style>
+
+        <div class="grid">
+            <div class="grid_item">
+                <img width="200px" src="{% static 'img/creps.png' %}" alt="gr">
+                <div class="grid_text">
+                    <h6>Welcome to MyStore Account</h6>
+                    <span class="gr_line"></span>
+                    <h2>PROFILE: {{ user.username }}</h2>
+                    <p>EMAIL: {{ user.email }}</p>
+                </div>
+                <div class="shop_link pro">
+                    <a href="{% url 'add_basket' %}">AddBasket</a>
+                </div>
+            </div>
+            <div class="grid_item">
+                <img width="400px" src="{% static 'img/salat.png' %}" alt="sl">
+                <div class="grid_text">
+                    <h6>Your purchases:</h6>
+                    <span class="gr_line"></span>
+                    <div class="gr_categ">
+                        <ol>
+                            {% for order in user.customer.orders.all %}
+                                <li> - {{ order.product.name|title }}
+                                    {{ order.quantity }}  ({{ order.product.price|currency }}-UNIT price)</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
+
+</body>
+
+
+

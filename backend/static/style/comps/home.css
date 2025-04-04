@@ -1,0 +1,147 @@
+.face{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 40vw;
+}
+
+
+.face_item_up{
+    background-image: url("../../img/salat.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(50% - 10px);
+    margin-bottom: 10px;
+    margin-top: 40px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.face_item_up h2{
+    font-size: 25px;
+    width: fit-content;
+}
+
+
+.face_item_bott{
+    background-image: url("../../img/creps.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(50% - 10px);
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.face_slide{
+    width: calc(60% - 10px);
+    height: 100%;
+}
+
+
+.face_item{
+    width: calc(40% - 10px);
+    height: 100%;
+}
+
+
+.face_slide_item h1{
+    display: inline;
+    font-size: 50px;
+    position: relative;
+    margin: 40px 0;
+}
+
+
+.face_slide_item{
+    background-image: url("../../img/berry.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 30px;
+    margin:2%;
+}
+
+
+.face_slide_item > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.shop_link{
+    padding-top: 320px;
+    padding-bottom: 10px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+
+.shop_link a{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(171, 99, 238);
+    color: rgb(78, 29, 71);
+    padding: 15px 20px;
+}
+
+
+.shop_link:hover a{
+    color: rgb(251, 5, 83);
+    background-color: rgb(78, 29, 71);
+}
+
+
+.menu_link{
+    background-color: rgb(171, 99, 238);
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(78, 29, 71);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight:bolder;
+    color: white;
+    padding: 2%;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+
+.face_item_bott h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+
+.face_item_bott h1{
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+
+
+
+

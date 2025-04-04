@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Category{% endblock title %}
+
+<main>
+{% block content %}
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+        <div class="card">
+
+            {% if category %}
+                <div class="card_item">
+                    <div class="card_head">
+                        <h1>{{ category.name|title }}</h1>
+                    </div>
+                    {% for product in category.products.all %}
+                        <div class="card_body S">
+                            <img width="200px" src="{% static 'img/salat.png' %}" alt="sal">
+                            <h2>Describe:</h2>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'product' product.pk %}">{{ product.name }}</a>
+                                        ({{ product.price|currency }})
+                                    </li>
+                                </ul>
+                            <div class="menu_link card_link_pro">
+                                <a href="{% url 'add_basket' %}">Buy Now</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+{% endblock %}
+
+</main>

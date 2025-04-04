@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Contact{% endblock title %}
+
+<main>
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+    {% block content %}
+    <style>
+        .footer{
+            display: flex;
+            margin: 5% 0;
+            justify-content: space-around;
+        }
+
+        .footer_item{
+            width: calc(33% - 30px);
+            margin-left: 3%;
+        }
+
+        .footer_item img{
+            width: 50%;
+        }
+
+        .footer_item a{
+            display: block;
+            color: gray;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: .3s;
+        }
+
+        .footer_item a:hover{
+            color: rgb(59, 96, 59);
+        }
+
+        .footer_item h1{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .footer_item h2{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .footer_item h3{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .footer_item p{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <footer class="footer">
+        <div class="footer_item">
+            <h2>ADRESS: </h2>
+            <h2>Neverland, Cherryblossom st, 123/8</h2>
+            <p>OPEN - CLOSED:</p>
+            <p> 10:00 am  10:00 pm</p>
+            <p>Email:</p>
+            <a href="#"> contact@gmail.com</a>
+            <p>Follow us: </p>
+            <a href="#">mystore@facebook.com</a>
+        </div>
+        <div class="footer_item">
+            <h2>INFO:</h2>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Publicity</a>
+            <a href="#">FAQ</a>
+            <h1>Table Reservation:</h1>
+            <h2>+1234 345 56 78</h2>
+        </div>
+        <div class="footer_item">
+            <h1>Accept Payment:</h1>
+            <h2>VISA</h2>
+            <h2>MASTERCARD</h2>
+            <img src="{% static 'img/card.png' %}" alt="cd">
+        </div>
+    </footer>
+    {% endblock %}
+</main>

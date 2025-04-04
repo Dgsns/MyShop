@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Home{% endblock title %}
+
+<main>
+
+{% block content %}
+    {% block css %}
+        <link type="text/css" href="{% static 'style/all.css' %}" rel="stylesheet">
+    {% endblock %}
+
+        <div class="face">
+            <div class="face_slide">
+                <div class="face_slide_item">
+                    <h1>Farmers Products <br>Fresh and Tasty</h1>
+                    <div class="shop_link">
+                        <a href="{% url 'product_list' %}">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="face_item">
+                <div class="face_item_up">
+                    <h2>Menu of the Day: <hr> Lorem ipsum dolor sit amet.</h2>
+                    <ol>
+                        <li>-123</li>
+                        <li>-123</li>
+                        <li>-123</li>
+                    </ol>
+                    <div class="menu_link">
+                        <a href="{% url 'add_basket' %}">MENU</a>
+                    </div>
+                </div>
+                <div class="face_item_bott">
+                    <h2>Bonus @ Discount</h2>
+                    <h1>GET THE BEST</h1>
+                    <h1>FINE AND FAST</h1>
+                    <div class="menu_link">
+                        <a href="{% url 'add_basket' %}">PICK UP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
+</main>
+
+
+
+
+
+
